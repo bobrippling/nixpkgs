@@ -65,7 +65,7 @@ in
 
     logs = let
       # "all" must come first so it can be overridden by more specific areas
-      areas = [ "all" "main" "network" "bus" "update" "other" ];
+      areas = [ "all" "main" "network" "bus" "device" "update" "other" ];
       levels = [ "none" "error" "notice" "info" "debug" ];
     in listToAttrs (map (area: nameValuePair area (mkOption {
       type = types.enum levels;
